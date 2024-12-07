@@ -6,9 +6,8 @@ mkdir $HOME/.config
 ln -s $HOME/.dotfiles/nvim $HOME/.config/nvim
 
 # for zshrc
-sudo wget -O /etc/zsh/zshrc https://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
-wget -O $HOME/.zshrc https://git.grml.org/f/grml-etc-core/etc/skel/.zshrc
-ln -sv $HOME/.dotfiles/zsh/.zshrc.pre $HOME/.zshrc.pre
+wget -O $HOME/.zshrc https://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
+ln -sv $HOME/.dotfiles/zsh/.zshrc.local $HOME/.zshrc.local
 
 # for tmux
 mkdir $HOME/.config/tmux
