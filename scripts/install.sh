@@ -8,7 +8,7 @@ sudo apt upgrade -y
 
 # change shell from bash to zsh
 sudo apt -y install zsh
-chsh -s /bin/zsh
+sudo chsh -s /bin/zsh
 
 sudo apt install -y zsh-completions
 sudo apt install -y zsh-autosuggestions
