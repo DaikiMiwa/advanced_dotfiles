@@ -4,14 +4,14 @@ chmod +x link.sh
 ./link.sh
 
 # change shell from bash to zsh
-sudo apt install zsh
+sudo apt -y install zsh
 chsh -s /bin/zsh
 
-sudo apt install zsh-completions
-sudo apt install zsh-autosuggestions
+sudo apt install -y zsh-completions
+sudo apt install -y zsh-autosuggestions
 
 # install neovim dependencies
-sudo apt install gcc ripgrep nodejs npm
+sudo apt -y install gcc ripgrep nodejs npm
 
 # install lazy git
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
@@ -26,10 +26,10 @@ curl -sSf https://rye.astral.sh/get | bash
 rye self completion -s zsh > ~/.zfunc/_rye	
 
 # install neovim
-sudo apt install neovim 
+sudo apt -y install neovim 
 
 # install tmux
-sudo apt install tmux
+sudo apt -y install tmux
 
 # github cli
 (type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
@@ -41,7 +41,10 @@ sudo apt install tmux
 	&& sudo apt install gh -y
 
 # ghq
-sudo apt  install -y golang-go
+sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt update
+sudo apt install -y golang-go
+
 go install github.com/x-motemen/ghq@latest
 
 # git-cz
