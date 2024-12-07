@@ -49,8 +49,8 @@ sudo apt -y install tmux
 	&& sudo apt install gh -y
 
 # ghq
-sudo add-apt-repository ppa:longsleep/golang-backports
-sudo apt update
+sudo add-apt-repository -y ppa:longsleep/golang-backports
+sudo apt update -y
 sudo apt install -y golang-go
 
 go install github.com/x-motemen/ghq@latest
