@@ -10,7 +10,7 @@ chsh -s /bin/zsh
 sudo apt install -y zsh-completions
 sudo apt install -y zsh-autosuggestions
 
-# install neovim dependencies
+# install dependencies
 sudo apt -y install gcc ripgrep nodejs npm
 
 # install lazy git
@@ -26,7 +26,10 @@ curl -sSf https://rye.astral.sh/get | bash
 rye self completion -s zsh > ~/.zfunc/_rye	
 
 # install neovim
-sudo apt -y install neovim 
+mkdir -p $HOME/.local/bin
+wget https://github.com/neovim/neovim/releases/download/v0.10.2/nvim.appimage -P $HOME/.local/bin
+mv $HOME/.local/bin/nvim.appimage $HOME/.local/bin/nvim
+chmod +x $HOME/.local/bin/nvim
 
 # install tmux
 sudo apt -y install tmux
