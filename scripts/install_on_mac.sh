@@ -31,7 +31,7 @@ brew install lazygit
 brew install rye
 
 # Make sure ~/.zfunc is added to fpath, before compinit.
-rye self completion -s zsh > ~/.zfunc/_rye
+rye self completion -s zsh >~/.zfunc/_rye
 
 # install neovim
 brew install neovim
@@ -47,3 +47,7 @@ brew install ghq
 
 # git-cz
 npm install -g git-cz
+
+# install
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
