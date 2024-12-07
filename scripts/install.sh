@@ -3,6 +3,9 @@
 chmod +x link.sh
 ./link.sh
 
+sudo apt update -y
+sudo apt upgrade -y 
+
 # change shell from bash to zsh
 sudo apt -y install zsh
 chsh -s /bin/zsh
@@ -20,6 +23,7 @@ tar xf lazygit.tar.gz lazygit
 sudo install lazygit -D -t /usr/local/bin/
 
 # install python through rye
+RYE_INSTALL_OPTION=--yes
 curl -sSf https://rye.astral.sh/get | bash
 
 # Make sure ~/.zfunc is added to fpath, before compinit.
