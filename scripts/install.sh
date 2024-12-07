@@ -14,7 +14,7 @@ sudo apt install -y zsh-completions
 sudo apt install -y zsh-autosuggestions
 
 # install dependencies
-sudo apt -y install gcc ripgrep nodejs npm
+sudo apt -y install gcc nodejs npm
 
 # install lazy git
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
