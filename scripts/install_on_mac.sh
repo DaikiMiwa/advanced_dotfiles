@@ -48,6 +48,15 @@ brew install ghq
 # git-cz
 npm install -g git-cz
 
-# install
+# install terraform
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
+
+# install aws
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+sudo installer -pkg AWSCLIV2.pkg -target /
+
+# install session manager plugin
+curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/mac/sessionmanager-bundle.zip" -o "sessionmanager-bundle.zip"
+unzip sessionmanager-bundle.zip
+sudo ./sessionmanager-bundle/install -i /usr/local/sessionmanagerplugin -b /usr/local/bin/session-manager-plugin

@@ -58,7 +58,7 @@ go install github.com/x-motemen/ghq@latest
 # git-cz
 npm install -g git-cz
 
-# install
+# install terraform
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
 wget -O- https://apt.releases.hashicorp.com/gpg |
 	gpg --dearmor |
@@ -70,3 +70,10 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
 https://apt.releases.hashicorp.com $(lsb_release -cs) main" |
 	sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt install terraform
+
+# install aws cli
+sudo snap install aws-cli --classic
+
+# install session manager plugin
+curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
+sudo dpkg -i session-manager-plugin.deb
