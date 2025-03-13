@@ -1,5 +1,8 @@
 #!/bin/sh
 
+chmod +x link.sh
+./link.sh
+
 # Install Homebrew if it's not already installed
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -11,10 +14,6 @@ brew upgrade
 
 # Install Xcode Command Line Tools
 xcode-select --install
-
-# change shell from bash to zsh
-brew install zsh
-chsh -s /bin/zsh
 
 # install zsh plugins (using a plugin manager like Oh My Zsh is recommended)
 brew install zsh-completions
