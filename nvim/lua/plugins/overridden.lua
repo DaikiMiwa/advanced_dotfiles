@@ -44,7 +44,8 @@ return {
           { name = "path" },
           { name = "copilot" },
           { name = 'nvim_lsp_signature_help' },
-          { name = 'luasnip' }
+          { name = 'luasnip' },
+           { name = "emoji" }
         },
         matching = {
           disallow_fuzzy_matching = true
