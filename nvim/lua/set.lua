@@ -88,3 +88,6 @@ else
     end
   end
 end
+
+-- NvimTreeの背景色を透明に設定
+vim.cmd[[hi NvimTreeNormal guibg=NONE ctermbg=NONE]]
