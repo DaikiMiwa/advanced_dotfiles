@@ -29,3 +29,18 @@ esac
 
 # openコマンドを用意
 function open() { cmd.exe /c start $(wslpath -w $1) }
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+export EDITOR=nvim
+
+export BROWSER=$HOME/bin/edge
+
+export PATH="$HOME/.tfenv/bin:$PATH"
+export GPG_TTY=$(tty)
+
+# .envを読み込む
+if [ -f .env ]; then
+  export $(cat .env | xargs)
+fi
